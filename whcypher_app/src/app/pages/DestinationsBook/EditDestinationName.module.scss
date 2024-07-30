@@ -1,0 +1,44 @@
+.container {
+  overflow: scroll;
+
+  .infoWrapper {
+    position: relative;
+    margin-top: 20px;
+
+    .label {
+      font-weight: 500;
+    }
+
+    .info {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .fieldWithIcons {
+    display: flex;
+    align-items: center;
+
+    .iconButton {
+      padding: 5px !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 !important;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        border-radius: 50%;
+      }
+    }
+
+    .icon {
+      font-size: 16px;
+      color: #868686;
+    }
+  }
+  
+}

@@ -1,0 +1,35 @@
+.container {
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  .header {
+    font-weight: 500;
+    font-size: 21px;
+    color: #000;
+  }
+
+  .faqLink {
+    font-size: 15px;
+    text-decoration: underline;
+    text-align: center;
+    width: 100%;
+  }
+
+  .note {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+  }
+}

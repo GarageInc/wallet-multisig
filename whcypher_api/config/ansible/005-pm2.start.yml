@@ -1,0 +1,21 @@
+---
+- hosts: cosigner_prod_api
+  vars:
+    deploy_dir: /var/www/signer.whalesheaven.com/current
+
+  tasks:
+    # On local machine run `npx shipit production deploy`
+
+    - name: Start PM2 using pm2.config.yml
+      command: pm2 start pm2.config.js
+      become: false
+      args:
+        chdir: "{{ deploy_dir }}"
+
+    - name: Set PM2 to start on reboot
+      command: pm2 startup systemd -u {{ ansible_user }} --hp /home/{{ ansible_user }}
+      become: true
+
+    - name: Save PM2
+      command: pm2 save
+      become: false

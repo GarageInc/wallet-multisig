@@ -1,0 +1,1 @@
+export const ASSET_BALANCE_PRECISION = 6

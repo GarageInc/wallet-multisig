@@ -1,0 +1,28 @@
+.padContainer {
+  border-radius: 13px;
+  background: #9b9b9b;
+  min-height: 86px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 1px solid #9b9b9b;
+  padding: 18px 26px;
+}
+
+.padContainerShow {
+  background: #fff;
+}
+
+.padTitle {
+  color: white;
+  font-size: 16px;
+}
+
+.padWords {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+}

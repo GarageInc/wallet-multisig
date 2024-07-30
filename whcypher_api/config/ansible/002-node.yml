@@ -1,0 +1,9 @@
+# https://galaxy.ansible.com/geerlingguy/ansible-role-nodejs
+# ansible-galaxy install geerlingguy.nodejs
+
+---
+- name: Install Node
+  hosts: cosigner_prod_api
+  become: true
+  roles:
+    - role: geerlingguy.nodejs

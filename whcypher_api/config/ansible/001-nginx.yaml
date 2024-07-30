@@ -1,0 +1,72 @@
+# Taken from: https://github.com/ansible-collections/community.crypto
+# ansible-galaxy collection install community.crypto
+#
+# Steps to setup NGINX to only talk to Clourflate servers
+#
+#     https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-20-04
+#     https://support.cloudflare.com/hc/en-us/articles/204899617-Authenticated-Origin-Pulls
+#
+#
+
+---
+- hosts: cosigner_prod_api
+  become: true
+  vars:
+    username: "{{ ansible_ssh_user }}"
+    doc_root: /var/www/signer.whalesheaven.com
+    domain_name: signer.whalesheaven.com
+    www_pass_protected: false
+    subdomains: [  ]
+    all_domains: signer.whalesheaven.com
+
+  tasks:
+    - name: ensure nginx is at the latest version
+      apt:
+        name: nginx
+        state: latest
+
+    - name: Remove default nginx config
+      file:
+        name: /etc/nginx/sites-enabled/default
+        state: absent
+
+    - name: Create custom document root
+      file:
+        path: "{{ doc_root }}"
+        state: directory
+        owner: "{{ username }}"
+        group: www-data
+
+    - name: copy the nginx default server config file
+      template:
+        src: 001-default_server.all.conf
+        dest: "/etc/nginx/sites-available/default_server.all.conf"
+        mode: 0444
+
+    - name: create symlink
+      file:
+        src: "/etc/nginx/sites-available/default_server.all.conf"
+        dest: "/etc/nginx/sites-enabled/default_server.all.conf"
+        state: link
+
+    - name: Install nginx for specified site
+      template:
+        src: 001-domain.com.https-conf.j2
+        dest: /etc/nginx/sites-available/{{ domain_name }}.https.conf
+
+    - name: create symlink
+      file:
+        src: /etc/nginx/sites-available/{{ domain_name }}.https.conf
+        dest: /etc/nginx/sites-enabled/{{ domain_name }}.https.conf
+        state: link
+
+    - name: create application upstream conf
+      template:
+        src: 001-app-upstream.conf.j2
+        dest: /etc/nginx/conf.d/app-upstream.conf
+        mode: 0444
+
+    - name: Reload nginx to activate specified site
+      service:
+        name: nginx
+        state: restarted

@@ -1,0 +1,75 @@
+.container {
+  .elementWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 20px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -25px;
+    padding-left: 25px;
+    margin-right: -25px;
+    padding-right: 25px;
+
+    &:hover {
+      background-color: #f6f6f6
+    }
+  }
+
+  .chainName {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 30px;
+    height: 48px;
+  }
+
+  .recordInfoWrapper {
+    text-align: left;
+    max-width: 130px;
+  }
+
+  .nameWrapper {
+    display: flex;
+    align-items: center;
+
+    .editRecordNameButton {
+      padding: 0px;
+      margin-left: 5px;
+      padding: 5px;
+    }
+    
+    .editRecordNameIcon {
+      color: #868686;
+      font-size: 14px;
+    }
+  }
+
+  .nameInfo {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .addressWrapper {
+    display: flex;
+    align-items: center;
+
+    .addressInfo {
+      font-size: 12px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+
+  .blockchainInfo {
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .button {
+    margin-left: auto;
+    padding: 6px;
+    margin-bottom: 3px;
+  }
+}

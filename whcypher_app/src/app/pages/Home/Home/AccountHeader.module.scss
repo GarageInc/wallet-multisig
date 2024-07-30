@@ -1,0 +1,26 @@
+.container {
+  .gutters {
+    padding-left: 3px;
+  }
+}
+
+.goBack {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+}
+
+.pubKeyWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionsNavIcon {
+  color: #000;
+}
+
+.optionsItemText {
+  margin-left: 10px;
+  color: #000;
+}

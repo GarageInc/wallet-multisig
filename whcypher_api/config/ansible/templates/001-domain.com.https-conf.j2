@@ -1,0 +1,23 @@
+server {
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
+
+  server_name {{ domain_name }};
+
+  # Generate origin serve certificates in CloudFlare (In SSL/TLS section)
+  ssl_certificate         /etc/nginx/ssl/cloudflareorigin-crt.pem;
+  ssl_certificate_key     /etc/nginx/ssl/cloudflareorigin-key.pem;
+  # Provide Authenticated origin pull certificate https://support.cloudflare.com/hc/en-us/articles/204899617-Authenticated-Origin-Pulls
+  ssl_client_certificate  /etc/nginx/ssl/cloudflare-pull-ca.pem;
+  ssl_verify_client on;
+
+  location / {
+    proxy_set_header X-Forwarded-For $remote_addr;
+    proxy_set_header Host $http_host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+
+    proxy_redirect off;
+    proxy_pass http://app;
+  }
+}

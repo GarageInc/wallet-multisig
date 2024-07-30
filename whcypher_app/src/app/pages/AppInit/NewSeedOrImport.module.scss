@@ -1,0 +1,19 @@
+.container {
+    padding: 0;
+
+    .topCard {
+        margin-top: 0 !important;
+    }
+
+    .bottomCard {
+        margin-bottom: 0 !important;
+    }
+}
+
+.centerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

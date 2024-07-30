@@ -1,0 +1,23 @@
+This folder was created to generate a protobuf schema for tron.
+
+* cd into into this folder
+* Download latest protoc from https://github.com/protocolbuffers/protobuf/releases
+* Extract it here
+* Copy proto files (ie. Tron.proto) from https://github.com/tronprotocol/java-tron/blob/develop/protocol/src/main/protos/core/
+* Now run here
+
+    ../../../../protobuf/protoc-22.5-linux-x86_64/bin/protoc --js_out=import_style=commonjs,binary:. Tron.proto
+    ../../../../protobuf/protoc-22.5-linux-x86_64/bin/protoc --js_out=import_style=commonjs,binary:. balance_contract.proto
+    ../../../../protobuf/protoc-22.5-linux-x86_64/bin/protoc --js_out=import_style=commonjs,binary:. smart_contract.proto
+    ../../../../protobuf/protoc-22.5-linux-x86_64/bin/protoc --js_out=import_style=commonjs,binary:. core/Discover.proto
+    ../../../../protobuf/protoc-22.5-linux-x86_64/bin/protoc --js_out=import_style=commonjs,binary:. core/contract/common.proto
+
+** You may need to install protoc-gen-js if you will see a message complaining that it is missing
+
+    pm install -g protoc-gen-js
+
+Educational video
+
+    https://www.youtube.com/watch?v=46O73On0gyI
+
+    Check it starting from 19th minute

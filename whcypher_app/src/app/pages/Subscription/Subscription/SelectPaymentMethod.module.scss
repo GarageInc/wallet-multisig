@@ -1,0 +1,110 @@
+.sectionWrapper {
+  text-align: left;
+  padding-top: 5px;
+
+  .sectionDescriptionTitle {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .packageDetailsWrapper {
+    // border-top: 1px solid #bfbfbf;
+    // border-bottom: 1px solid #bfbfbf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 7px 0px;
+    /* background-color: #F4F7FF; */
+    border-radius: 5px;
+    // margin-bottom: 15px;
+    width: 100%;
+  
+    .packageDetails {
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+      font-weight: 500;
+      width: 100%;
+    }
+    
+    .packageInfo {
+      font-size: 13px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .paymentButtonsWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust column width as needed */
+    gap: 10px; /* Adjust gap between items as needed */
+  }
+
+  .paymentButtonWrapper {
+    // margin: 0 0 20px;
+    padding: 12px;
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid #c3c3c3;
+    background-color: #F4F7FF;
+    width: 100%;
+
+    &:hover {
+      border-color: #2b3bcb;
+      background-color: #eef1fc;
+    }
+    
+    &:active {
+      border-color: #2938b8;
+      background-color: #e5eafc;
+    }
+  
+    .paymentMethod {
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+      font-weight: 500;
+      width: 100%;
+    }
+
+    .paymentInfo {
+      font-size: 10px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .paymentMethodNameWrapper {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .paymentMethodLabel {
+      padding: 3px 3px 2px;
+      border-radius: 5px;
+      /* border: 1px solid #c3c3c3; */
+      background-color: #43A047;
+      color: white;
+      font-size: 8px;
+      margin-left: 2px;
+    }
+
+    .currencyImage {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}
+
+.separator {
+  width: 100%;
+  border-top: 1px solid #f5f5f5;
+}
+
+.amount {
+  font-weight: 500;
+}
+
+.amountWithDiscount {
+  color: #43A047;
+}

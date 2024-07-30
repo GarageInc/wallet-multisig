@@ -1,0 +1,72 @@
+.container {
+  .subTitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #252525;
+    text-align: left;
+    letter-spacing: -0.01em;
+  }
+
+  .errorIcon {
+    font-size: 18px;
+    color: red;
+    margin-left: 5px;
+  }
+  
+}
+
+.selectAllWrapper {
+  position: relative;
+  text-align: right;
+}
+
+.walletsList {
+  padding-top: 10px;
+  position: relative;
+}
+
+.blockchainNameWrapper {
+  text-align: left;
+}
+
+.walletEntryWrapper {
+  display: grid;
+  grid-template-columns: 5fr auto;
+  grid-template-rows: 1fr;
+  padding-top: 10px;
+}
+
+.walletInfoWrapper {
+  text-align: left;
+}
+
+.walletNameWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.walletAddressWrapper {
+  align-items: left;
+}
+
+.walletCheckboxWrapper {
+  position: right;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  color: #252525;
+  font-weight: 300;
+  font-size: 14px;
+  max-width: 270px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  margin: 0 auto 40px;
+}
+
+.content {
+  height: 430px;
+  overflow-y: scroll;
+}

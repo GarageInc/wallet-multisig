@@ -1,0 +1,21 @@
+.container {
+  overflow: scroll;
+  width: 100%;
+
+
+  .feeWrapper {
+    position: relative; 
+
+    .label {
+      font-weight: 500;
+    }
+
+    .feeInfo {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

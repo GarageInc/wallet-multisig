@@ -1,0 +1,44 @@
+.container {
+  .btn {
+    margin-top: 20px;
+  }
+
+  .buttonWrapper {
+    button {
+      height: 40px;
+      margin-top: 20px;
+    }
+  }
+
+  .password_error {
+    color: red;
+    font-size: 10px;
+    float: left;
+  }
+
+  .subTitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #252525;
+    text-align: left;
+    letter-spacing: -0.01em;
+  }
+}
+
+.elField {
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.elText3 {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.passwordField {
+  letter-spacing: 5px;
+}

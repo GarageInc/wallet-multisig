@@ -1,0 +1,75 @@
+.periodButtonWrapper {
+  margin: 0 0 12px;
+  padding: 12px;
+  text-align: left;
+  border-radius: 5px;
+  border: 1px solid #c3c3c3;
+  width: 100%;
+
+  &:hover {
+    border: 1px solid #b3b3b3;
+    background-color: #F7F7F7;
+  }
+
+  &.selected {
+    border-color: #2F41E8;
+    background-color: #F4F7FF;
+
+    &:hover {
+      border-color: #2b3bcb;
+      background-color: #eef1fc;
+    }
+  }
+}
+
+.periodLabel {
+  padding: 3px 20px;
+  border-radius: 5px;
+  /* border: 1px solid #c3c3c3; */
+  background-color: #43A047;
+  color: white;
+  top: 10px;
+}
+
+.periodDetailsWrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.periodInfoWrapper {
+  font-size: 13px;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.expireInfoWrapper {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.inputWithLinkWrapper {
+  position: relative;
+
+  .inputLink {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .valueInfoLine {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+  }
+}
+
+.amount {
+  font-weight: 500;
+}
+
+.amountWithDiscount {
+  color: #43A047;
+}

@@ -1,0 +1,41 @@
+.container {
+  padding: 0 0 30px 0;
+}
+
+.handler {
+  height: 50px;
+  width: 50px;
+}
+
+.handlerIcon {
+  font-size: 30px;
+}
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.errorIcon {
+  font-size: 18px;
+  color: red;
+  margin-left: 5px;
+}
+
+.errorText {
+  color: red;
+  font-size: 13px;
+}
+
+.bodyText {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: underline;
+}

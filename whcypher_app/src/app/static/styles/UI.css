@@ -1,0 +1,3251 @@
+/* Font copied in place by React Studio. Please check that your license for this font file permits embedding on a website. */
+/* @font-face {
+    font-family: 'HelveticaNeue';
+    src: url('fonts/HelveticaNeue.ttf');
+} */
+
+/* .font-helveticaNeue {
+    font-family: 'HelveticaNeue', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+} */
+
+.App { /* Base font style */
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    font-size: 15.2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: rgba(0, 0, 0, 0.8500);
+    background-color: #f6f6f6;
+}
+
+/* .App .baseFont * { /* Base font style override for UI framework components
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    font-size: 15.2px;
+} */
+
+.App .appBg {
+    background-color: #f6f6f6;
+}
+
+.App .headerBg {
+    background-color: #2790C3;
+}
+
+.App .cardBg {
+    background-color: white;
+}
+
+.App .baseTextBg { /* Base text color as background */
+    background-color: rgba(0, 0, 0, 0.8500);
+}
+
+.App .secondaryTextColor {
+    color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .secondaryTextBg {
+    background-color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .primaryTextColor {
+    color: #bee9ee;
+}
+
+.App .primaryBg {
+    background-color: #bee9ee;
+}
+
+.App .highlightTextColor {
+    color: #0093d5;
+}
+
+.App .highlightBg {
+    background-color: #0093d5;
+}
+
+/* Styles to customize the UI framework plugin (MUI, https://muicss.com) */
+.mui-btn {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn--primary {
+    background-color: #bee9ee;
+}
+.mui-btn--primary:active, .mui-btn--primary:focus, .mui-btn--primary:hover {
+    background-color: #c3ebf0;
+}
+.mui-btn--accent {
+    background-color: #0093d5;
+}
+.mui-btn--accent:active, .mui-btn--accent:focus, .mui-btn--accent:hover {
+    background-color: #069fda;
+}
+.mui-textfield {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-checkbox, .mui-radio {  /* Reset UI framework styling that affects layout */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-select {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn+.mui-btn {  /* Reset UI framework styling that affects layout */
+    margin-left: 0;
+}
+.mui-btn--fab {  /* Reset UI framework styling that breaks compositing */
+    z-index: auto;
+}
+
+@keyframes fadeIn {
+    0%   { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes slideIn_right {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+@keyframes slideIn_bottom {
+    0%   { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+/* System font classes */
+/*
+.App .systemFontRegular {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+}
+.App .systemFontBold {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    font-weight: 600;
+}
+.App .systemFontItalic {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    font-style: italic;
+}
+.App .systemFontBoldItalic {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+} */
+
+/* App-wide text styles specified in React Studio */
+/*
+.App .actionFont {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    font-size: 14.2px;
+    font-weight: 400;
+}
+.App .actionFont * {
+    font-size: 14.2px;
+}
+.App .headlineFont {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    font-size: 19.0px;
+    font-weight: 400;
+}
+.App .headlineFont * {
+    font-size: 19.0px;
+} */
+.App .navBar {
+    background-color: #bee9ee;
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 62px;
+    min-height: 62px;
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    font-size: 18px; */
+}
+
+.App .navBar a {
+    color: black;
+}
+
+.App .navBar .title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 4px;
+    margin-top: 13px;
+}
+
+.App .navBar .backBtn {
+    position: absolute;
+    padding: 4px;
+    margin-left: 14px;
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+@media (min-width: 320px) {
+    .mui-container {
+        max-width: 320px;
+    }
+}
+@media (min-width: 568px) {
+    .mui-container {
+        max-width: 568px;
+    }
+}
+@media (min-width: 768px) {
+    .mui-container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .mui-container {
+        max-width: 1024px;
+    }
+}
+
+.AppScreen {
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+}
+
+.App .background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*pointer-events: none;*/
+}
+
+.App .layoutFlow {
+    position: relative;
+    width: 100%;
+    /*pointer-events: none;*/
+}
+.App .layoutFlow:before {  /* Prevent margin collapse */
+    content: "";
+    display: table;
+    clear: both;
+}
+.App .layoutFlow .flowRow {
+    position: relative;
+    width: 100%;
+}
+
+.App .screenFgContainer {
+    /* Items in the foreground group within a screen are placed with fixed positioning */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.App .foreground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*pointer-events: none;*/
+}
+
+.App ul {
+    margin: 0;
+    padding: 0;
+}
+.App li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.App .hasNestedComps {
+    position: relative;
+}
+.App .hasNestedComps:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.App .hasNestedComps .background {
+    position: absolute;
+}
+.App .hasNestedComps .layoutFlow {
+    position: relative;
+}
+.App .bottomAlignedContent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.App .blockInputOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: auto;
+    z-index: 99999999;
+}
+
+/* This component has a fixed-size layout */
+.ImportSeed {
+    min-height: 600px;
+    width: 100%; /* This component was designed using a width of 443px */
+    height: 100%;
+}
+.ImportSeed > .background > .containerMinHeight {
+    min-height: 600px;
+}
+
+
+.ImportSeed > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.ImportSeed > .layoutFlow > .elText > * {
+    width: 100%;
+}
+
+
+
+.ImportSeed > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.ImportSeed > .layoutFlow > .elText2 > * {
+    width: 100%;
+}
+
+.ImportSeed > .layoutFlow > .elText3 {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.ImportSeed > .layoutFlow > .elText3 > * {
+    width: 100%;
+}
+
+
+
+.ImportSeed > .layoutFlow > .elTextarea {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: calc(20.0% + 0px);
+    width: calc(80.0% - 0px);
+}
+.ImportSeed > .layoutFlow > .elTextarea > * {
+    width: 100%;
+    height: 180px;
+}
+
+
+
+.ImportSeed > .layoutFlow > .elText4 {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.ImportSeed > .layoutFlow > .elText4 > * {
+    width: 100%;
+}
+
+
+
+.ImportSeed > .layoutFlow > .elField {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: calc(20.0% + 0px);
+    width: calc(80.0% - 0px);
+}
+.ImportSeed > .layoutFlow > .elField > * {
+    width: 100%;
+    height: 34px;
+}
+
+
+
+.ImportSeed > .layoutFlow > .elText5 {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.ImportSeed > .layoutFlow > .elText5 > * {
+    width: 100%;
+}
+
+
+
+.ImportSeed > .layoutFlow > .elField2 {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: calc(20.0% + 0px);
+    width: calc(80.0% - 0px);
+}
+.ImportSeed > .layoutFlow > .elField2 > * {
+    width: 100%;
+    height: 34px;
+}
+
+
+
+.ImportSeed > .layoutFlow > .elCheckbox {
+    position: relative;
+    margin-top: 22px;
+    /*width: 18px;*/
+    margin-left: 0px;
+}
+.ImportSeed > .layoutFlow > .elCheckbox > * {
+    /*width: 18px;*/
+}
+
+
+
+.ImportSeed > .layoutFlow > .elTextBlock5 {
+    position: relative;
+    margin-top: -24px;
+    margin-left: 26px;
+    margin-right: 0px;
+    width: calc(100.0% - 26px);
+}
+.ImportSeed > .layoutFlow > .elTextBlock5 > * {
+    width: 100%;
+}
+
+
+.ImportSeed .elButton button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.ImportSeed .elButton button:focus {
+    box-shadow: 0 0 5px rgba(0, 149, 214, 0.5000);
+    outline: none;
+}
+
+.ImportSeed > .layoutFlow > .elButton {
+    /*line-height: 35px;*/
+    position: relative;
+    margin-top: 80px;
+    width: 144px;
+    margin-left: 0px;
+}
+.ImportSeed > .layoutFlow > .elButton > * {
+    width: 144px;
+    height: 35px;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.ImportAccountSeedScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .ImportAccountSeedScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .ImportAccountSeedScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .ImportAccountSeedScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+
+.ImportAccountSeedScreen .elImportSeed {
+    overflow: hidden;
+}
+
+.ImportAccountSeedScreen .elImportSeed.hasNestedComps > div {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.ImportAccountSeedScreen > .layoutFlow > .elImportSeed {
+    position: relative;
+    margin-top: 82px;
+    width: 310px;
+    margin-left: calc(50.0% - 155px);
+}
+.ImportAccountSeedScreen > .layoutFlow > .elImportSeed > * {
+    width: 310px;
+}
+
+.ImportAccountSeedScreen > .layoutFlow > .elImportSeed > .background > .containerMinHeight {
+    min-height: 537px;
+}
+
+@media (min-width: 568px) {
+    .ImportAccountSeedScreen > .layoutFlow > .elImportSeed {
+        position: relative;
+        margin-top: 82px;
+        width: 511px;
+        margin-left: calc(50.0% - 256px);
+    }
+    .ImportAccountSeedScreen > .layoutFlow > .elImportSeed > * {
+        width: 511px;
+    }
+
+    .ImportAccountSeedScreen > .layoutFlow > .elImportSeed > .background > .containerMinHeight {
+        min-height: 537px;
+    }
+
+}
+@media (min-width: 768px) {
+    .ImportAccountSeedScreen > .layoutFlow > .elImportSeed {
+        position: relative;
+        margin-top: 133px;
+        width: 600px;
+        margin-left: calc(50.0% - 300px);
+    }
+    .ImportAccountSeedScreen > .layoutFlow > .elImportSeed > * {
+        width: 600px;
+    }
+
+    .ImportAccountSeedScreen > .layoutFlow > .elImportSeed > .background > .containerMinHeight {
+        min-height: 537px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .ImportAccountSeedScreen > .layoutFlow > .elImportSeed {
+        position: relative;
+        margin-top: 133px;
+        width: 600px;
+        margin-left: calc(50.0% - 300px);
+    }
+    .ImportAccountSeedScreen > .layoutFlow > .elImportSeed > * {
+        width: 600px;
+    }
+
+    .ImportAccountSeedScreen > .layoutFlow > .elImportSeed > .background > .containerMinHeight {
+        min-height: 537px;
+    }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.ImportAccountSeedScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+    position: absolute;
+    left: calc(50.0% + -90px - 56px);
+    top: 24px;
+    width: 113px;
+    height: 42px;
+}
+@media (min-width: 568px) {
+    .ImportAccountSeedScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -210px - 56px);
+        top: 24px;
+        width: 113px;
+        height: 42px;
+    }
+}
+@media (min-width: 768px) {
+    .ImportAccountSeedScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -310px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+@media (min-width: 1024px) {
+    .ImportAccountSeedScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -368px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.WecomeScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .WecomeScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .WecomeScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .WecomeScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.WecomeScreen > .layoutFlow > .elText {
+    overflow: hidden;
+    position: relative;
+    margin-top: 261px;
+    width: 238px;
+    margin-left: calc(50.0% - 119px);
+}
+.WecomeScreen > .layoutFlow > .elText > * {
+    width: 238px;
+}
+
+@media (min-width: 568px) {
+    .WecomeScreen > .layoutFlow > .elText {
+        overflow: hidden;
+        position: relative;
+        margin-top: 172px;
+        width: 238px;
+        margin-left: calc(50.0% - 119px);
+    }
+    .WecomeScreen > .layoutFlow > .elText > * {
+        width: 238px;
+    }
+
+}
+@media (min-width: 768px) {
+    .WecomeScreen > .layoutFlow > .elText {
+        overflow: hidden;
+        position: relative;
+        margin-top: 260px;
+        width: 236px;
+        margin-left: calc(50.0% - 118px);
+    }
+    .WecomeScreen > .layoutFlow > .elText > * {
+        width: 236px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .WecomeScreen > .layoutFlow > .elText {
+        overflow: hidden;
+        position: relative;
+        margin-top: 261px;
+        width: 236px;
+        margin-left: calc(50.0% - 118px);
+    }
+    .WecomeScreen > .layoutFlow > .elText > * {
+        width: 236px;
+    }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.WecomeScreen > .layoutFlow > .elText2 {
+    overflow: hidden;
+    position: relative;
+    margin-top: 12px;
+    width: 309px;
+    margin-left: calc(50.0% - 155px);
+}
+.WecomeScreen > .layoutFlow > .elText2 > * {
+    width: 309px;
+}
+
+@media (min-width: 568px) {
+    .WecomeScreen > .layoutFlow > .elText2 {
+        overflow: hidden;
+        position: relative;
+        margin-top: 8px;
+        width: 309px;
+        margin-left: calc(50.0% - 155px);
+    }
+    .WecomeScreen > .layoutFlow > .elText2 > * {
+        width: 309px;
+    }
+
+}
+@media (min-width: 768px) {
+    .WecomeScreen > .layoutFlow > .elText2 {
+        overflow: hidden;
+        position: relative;
+        margin-top: 12px;
+        width: 307px;
+        margin-left: calc(50.0% - 154px);
+    }
+    .WecomeScreen > .layoutFlow > .elText2 > * {
+        width: 307px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .WecomeScreen > .layoutFlow > .elText2 {
+        overflow: hidden;
+        position: relative;
+        margin-top: 12px;
+        width: 307px;
+        margin-left: calc(50.0% - 154px);
+    }
+    .WecomeScreen > .layoutFlow > .elText2 > * {
+        width: 307px;
+    }
+
+}
+
+.WecomeScreen .elButton button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.WecomeScreen .elButton button:focus {
+    box-shadow: 0 0 5px rgba(30, 145, 195, 0.5000);
+    outline: none;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.WecomeScreen > .layoutFlow > .elButton {
+    /*line-height: 40px;*/
+    position: relative;
+    margin-top: 40px;
+    width: 272px;
+    margin-left: calc(50.0% - 136px);
+}
+.WecomeScreen > .layoutFlow > .elButton > * {
+    width: 272px;
+    height: 40px;
+}
+
+@media (min-width: 568px) {
+    .WecomeScreen > .layoutFlow > .elButton {
+        /*line-height: 40px;*/
+        position: relative;
+        margin-top: 6px;
+        width: 272px;
+        margin-left: calc(50.0% - 136px);
+    }
+    .WecomeScreen > .layoutFlow > .elButton > * {
+        width: 272px;
+        height: 40px;
+    }
+
+}
+@media (min-width: 768px) {
+    .WecomeScreen > .layoutFlow > .elButton {
+        /*line-height: 40px;*/
+        position: relative;
+        margin-top: 40px;
+        width: 270px;
+        margin-left: calc(50.0% - 135px);
+    }
+    .WecomeScreen > .layoutFlow > .elButton > * {
+        width: 270px;
+        height: 40px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .WecomeScreen > .layoutFlow > .elButton {
+        /*line-height: 40px;*/
+        position: relative;
+        margin-top: 40px;
+        width: 270px;
+        margin-left: calc(50.0% - 135px);
+    }
+    .WecomeScreen > .layoutFlow > .elButton > * {
+        width: 270px;
+        height: 40px;
+    }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.WecomeScreen > .screenFgContainer > .foreground > .elCypher_logo {
+    position: absolute;
+    left: calc(50.0% + 0px - 83px);
+    top: 70px;
+    width: 166px;
+    height: 155px;
+}
+@media (min-width: 568px) {
+    .WecomeScreen > .screenFgContainer > .foreground > .elCypher_logo {
+        left: calc(50.0% + 0px - 83px);
+        top: 11px;
+        width: 166px;
+        height: 155px;
+    }
+}
+@media (min-width: 768px) {
+    .WecomeScreen > .screenFgContainer > .foreground > .elCypher_logo {
+        left: calc(50.0% + 0px - 82px);
+        top: 70px;
+        width: 165px;
+        height: 154px;
+    }
+}
+@media (min-width: 1024px) {
+    .WecomeScreen > .screenFgContainer > .foreground > .elCypher_logo {
+        left: calc(50.0% + 0px - 80px);
+        top: 70px;
+        width: 161px;
+        height: 155px;
+    }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.ImportOrCreateScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .ImportOrCreateScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .ImportOrCreateScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .ImportOrCreateScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+
+.ImportOrCreateScreen .elColumns > div {
+    display: flex;
+    flex-direction: row;
+    height: auto;  /* This element is in scroll flow */
+    flex-wrap: wrap;
+}
+
+.ImportOrCreateScreen .elColumns .col0 {
+    flex: 50.0;  /* Base weight for this column */
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .ImportOrCreateScreen .elColumns .col0 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .ImportOrCreateScreen .elColumns .col0 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+    }
+
+}
+
+@media (max-width: 767px) {
+    .ImportOrCreateScreen .elColumns .col0 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 767px;
+    }
+
+}
+
+@media (max-width: 567px) {
+    .ImportOrCreateScreen .elColumns .col0 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 567px;
+    }
+
+}
+
+.ImportOrCreateScreen .elColumns .col1 {
+    flex: 50.0;  /* Base weight for this column */
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .ImportOrCreateScreen .elColumns .col1 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .ImportOrCreateScreen .elColumns .col1 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+    }
+
+}
+
+@media (max-width: 767px) {
+    .ImportOrCreateScreen .elColumns .col1 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 767px;
+    }
+
+}
+
+@media (max-width: 567px) {
+    .ImportOrCreateScreen .elColumns .col1 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 567px;
+    }
+
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.ImportOrCreateScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 30px;
+    width: 320px;
+    margin-left: calc(50.0% - 160px);
+}
+.ImportOrCreateScreen > .layoutFlow > .elColumns > * {
+    width: 320px;
+}
+
+@media (min-width: 568px) {
+    .ImportOrCreateScreen > .layoutFlow > .elColumns {
+        position: relative;
+        margin-top: 186px;
+        width: 562px;
+        margin-left: calc(50.0% - 281px);
+    }
+    .ImportOrCreateScreen > .layoutFlow > .elColumns > * {
+        width: 562px;
+    }
+
+}
+@media (min-width: 768px) {
+    .ImportOrCreateScreen > .layoutFlow > .elColumns {
+        position: relative;
+        margin-top: 133px;
+        width: 792px;
+        margin-left: calc(50.0% - 396px);
+    }
+    .ImportOrCreateScreen > .layoutFlow > .elColumns > * {
+        width: 792px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .ImportOrCreateScreen > .layoutFlow > .elColumns {
+        position: relative;
+        margin-top: 133px;
+        width: 792px;
+        margin-left: calc(50.0% - 396px);
+    }
+    .ImportOrCreateScreen > .layoutFlow > .elColumns > * {
+        width: 792px;
+    }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.ImportOrCreateScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+    position: absolute;
+    left: calc(50.0% + -90px - 56px);
+    top: 24px;
+    width: 113px;
+    height: 42px;
+}
+@media (min-width: 568px) {
+    .ImportOrCreateScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -210px - 56px);
+        top: 24px;
+        width: 113px;
+        height: 42px;
+    }
+}
+@media (min-width: 768px) {
+    .ImportOrCreateScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -310px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+@media (min-width: 1024px) {
+    .ImportOrCreateScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -368px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+
+/* This component has a fixed-size layout */
+.ImportVaultCard {
+    min-height: 250px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 349px */
+    height: 100%;
+}
+.ImportVaultCard > .background > .containerMinHeight {
+    min-height: 250px;
+}
+
+
+.ImportVaultCard > .foreground > .elRectangle {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    width: calc(100.0% - 5px - 5px);
+    height: calc(100% + 0.0% + -10.0px);
+}
+
+
+.ImportVaultCard > .foreground > .elTextBlock2 {
+    position: absolute;
+    left: calc(50.0% + 0px - 149px);
+    top: 131px;
+    width: 298px;
+    height: 32px;
+}
+
+.ImportVaultCard .elButton {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.ImportVaultCard .elButton:focus {
+    box-shadow: 0 0 5px rgba(30, 145, 195, 0.5000);
+    outline: none;
+}
+
+
+
+.ImportVaultCard > .foreground > .elButton {
+    /*line-height: 35px;*/
+    position: absolute;
+    left: calc(50.0% + 2px - 72px);
+    top: 185px;
+    width: 144px;
+    height: 35px;
+}
+
+
+.ImportVaultCard > .foreground > .elImport {
+    position: absolute;
+    left: calc(50.0% + 0px - 13px);
+    top: 47px;
+    width: 27px;
+    height: 32px;
+}
+
+
+.ImportVaultCard > .foreground > .elTextBlock {
+    position: absolute;
+    left: calc(50.0% + 0px - 172px);
+    top: 94px;
+    width: 345px;
+    height: 22px;
+}
+
+/* This component has a fixed-size layout */
+.CreateVaultCard {
+    min-height: 250px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 349px */
+    height: 100%;
+}
+.CreateVaultCard > .background > .containerMinHeight {
+    min-height: 250px;
+}
+
+
+.CreateVaultCard > .foreground > .elRectangle {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    width: calc(100.0% - 5px - 5px);
+    height: calc(100% + 0.0% + -10.0px);
+}
+
+
+.CreateVaultCard > .foreground > .elTextBlock2 {
+    position: absolute;
+    left: calc(50.0% + 2px - 149px);
+    top: 131px;
+    width: 298px;
+    height: 18px;
+}
+
+.CreateVaultCard .elButton {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.CreateVaultCard .elButton:focus {
+    box-shadow: 0 0 5px rgba(30, 145, 195, 0.5000);
+    outline: none;
+}
+
+
+
+.CreateVaultCard > .foreground > .elButton {
+    /*line-height: 35px;*/
+    position: absolute;
+    left: calc(50.0% + -1px - 72px);
+    top: 185px;
+    width: 144px;
+    height: 35px;
+}
+
+
+.CreateVaultCard > .foreground > .elTextBlock {
+    position: absolute;
+    left: calc(50.0% + 0px - 172px);
+    top: 94px;
+    width: 345px;
+    height: 22px;
+}
+
+
+.CreateVaultCard > .foreground > .elNew {
+    position: absolute;
+    left: calc(50.0% + 0px - 13px);
+    top: 51px;
+    width: 27px;
+    height: 27px;
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.CreatePasswordScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .CreatePasswordScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .CreatePasswordScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .CreatePasswordScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+
+.CreatePasswordScreen .elComp {
+    overflow: hidden;
+}
+
+.CreatePasswordScreen .elComp.hasNestedComps > div {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.CreatePasswordScreen > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 126px;
+    width: 298px;
+    margin-left: calc(50.0% - 149px);
+}
+.CreatePasswordScreen > .layoutFlow > .elComp > * {
+    width: 298px;
+}
+
+.CreatePasswordScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+    min-height: 403px;
+}
+
+@media (min-width: 568px) {
+    .CreatePasswordScreen > .layoutFlow > .elComp {
+        position: relative;
+        margin-top: 112px;
+        width: 427px;
+        margin-left: calc(50.0% - 214px);
+    }
+    .CreatePasswordScreen > .layoutFlow > .elComp > * {
+        width: 427px;
+    }
+
+    .CreatePasswordScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+        min-height: 403px;
+    }
+
+}
+@media (min-width: 768px) {
+    .CreatePasswordScreen > .layoutFlow > .elComp {
+        position: relative;
+        margin-top: 133px;
+        width: 424px;
+        margin-left: calc(43.9% - 212px);
+    }
+    .CreatePasswordScreen > .layoutFlow > .elComp > * {
+        width: 424px;
+    }
+
+    .CreatePasswordScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+        min-height: 401px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .CreatePasswordScreen > .layoutFlow > .elComp {
+        position: relative;
+        margin-top: 133px;
+        width: 424px;
+        margin-left: calc(43.2% - 212px);
+    }
+    .CreatePasswordScreen > .layoutFlow > .elComp > * {
+        width: 424px;
+    }
+
+    .CreatePasswordScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+        min-height: 400px;
+    }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.CreatePasswordScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+    position: absolute;
+    left: calc(50.0% + -90px - 56px);
+    top: 24px;
+    width: 113px;
+    height: 42px;
+}
+@media (min-width: 568px) {
+    .CreatePasswordScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -210px - 56px);
+        top: 24px;
+        width: 113px;
+        height: 42px;
+    }
+}
+@media (min-width: 768px) {
+    .CreatePasswordScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -310px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+@media (min-width: 1024px) {
+    .CreatePasswordScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -368px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+
+/* This component has a fixed-size layout */
+.CreatePasswordForm {
+    min-height: 400px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 310px */
+    height: 100%;
+}
+.CreatePasswordForm > .background > .containerMinHeight {
+    min-height: 400px;
+}
+
+
+.CreatePasswordForm > .foreground > .elTextBlock {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 351px;
+    height: 44px;
+}
+
+.CreatePasswordForm .elButton {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.CreatePasswordForm .elButton:focus {
+    box-shadow: 0 0 5px rgba(0, 149, 214, 0.5000);
+    outline: none;
+}
+
+
+
+.CreatePasswordForm > .foreground > .elButton {
+    /*line-height: 40px;*/
+    position: absolute;
+    left: 0px;
+    top: 298px;
+    width: 126px;
+    height: 40px;
+}
+
+
+.CreatePasswordForm > .foreground > .elCheckbox {
+    position: absolute;
+    left: 0px;
+    top: 240px;
+}
+
+
+.CreatePasswordForm > .foreground > .elField {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 93px;
+    width: 100.0%;
+    height: 34px;
+}
+
+
+.CreatePasswordForm > .foreground > .elTextBlock2 {
+    position: absolute;
+    left: 187px;
+    top: 15px;
+    width: 2px;
+    height: 22px;
+}
+
+
+.CreatePasswordForm > .foreground > .elTextBlock3 {
+    position: absolute;
+    left: 0px;
+    top: 78px;
+    width: 307px;
+    height: 18px;
+}
+
+
+.CreatePasswordForm > .foreground > .elTextBlock4 {
+    position: absolute;
+    left: 0px;
+    top: 158px;
+    width: 182px;
+    height: 18px;
+}
+
+
+.CreatePasswordForm > .foreground > .elTextBlock5 {
+    position: absolute;
+    left: 30px;
+    right: 0px;
+    top: 242px;
+    width: calc(100.0% - 31px - 0px);
+    height: 41px;
+}
+
+
+.CreatePasswordForm > .foreground > .elFieldCopy {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 173px;
+    width: 100.0%;
+    height: 34px;
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.SetSecretPhraseScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .SetSecretPhraseScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .SetSecretPhraseScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .SetSecretPhraseScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+
+.SetSecretPhraseScreen .elColumns > div {
+    display: flex;
+    flex-direction: row;
+    height: auto;  /* This element is in scroll flow */
+    flex-wrap: wrap;
+}
+
+.SetSecretPhraseScreen .elColumns .col0 {
+    flex: 50.0;  /* Base weight for this column */
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .SetSecretPhraseScreen .elColumns .col0 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .SetSecretPhraseScreen .elColumns .col0 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+    }
+
+}
+
+@media (max-width: 767px) {
+    .SetSecretPhraseScreen .elColumns .col0 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 767px;
+    }
+
+}
+
+@media (max-width: 567px) {
+    .SetSecretPhraseScreen .elColumns .col0 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 567px;
+    }
+
+}
+
+.SetSecretPhraseScreen .elColumns .col1 {
+    flex: 50.0;  /* Base weight for this column */
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .SetSecretPhraseScreen .elColumns .col1 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .SetSecretPhraseScreen .elColumns .col1 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+    }
+
+}
+
+@media (max-width: 767px) {
+    .SetSecretPhraseScreen .elColumns .col1 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 767px;
+    }
+
+}
+
+@media (max-width: 567px) {
+    .SetSecretPhraseScreen .elColumns .col1 {
+        flex: 50.0;  /* Column width for this screen format */
+        flex-basis: 567px;
+    }
+
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.SetSecretPhraseScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 94px;
+    width: 299px;
+    margin-left: calc(50.0% - 150px);
+}
+.SetSecretPhraseScreen > .layoutFlow > .elColumns > * {
+    width: 299px;
+}
+
+@media (min-width: 568px) {
+    .SetSecretPhraseScreen > .layoutFlow > .elColumns {
+        position: relative;
+        margin-top: 94px;
+        width: 522px;
+        margin-left: calc(50.0% - 261px);
+    }
+    .SetSecretPhraseScreen > .layoutFlow > .elColumns > * {
+        width: 522px;
+    }
+
+}
+@media (min-width: 768px) {
+    .SetSecretPhraseScreen > .layoutFlow > .elColumns {
+        position: relative;
+        margin-top: 133px;
+        width: 704px;
+        margin-left: calc(50.0% - 352px);
+    }
+    .SetSecretPhraseScreen > .layoutFlow > .elColumns > * {
+        width: 704px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .SetSecretPhraseScreen > .layoutFlow > .elColumns {
+        position: relative;
+        margin-top: 133px;
+        width: 800px;
+        margin-left: calc(50.0% - 400px);
+    }
+    .SetSecretPhraseScreen > .layoutFlow > .elColumns > * {
+        width: 800px;
+    }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.SetSecretPhraseScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+    position: absolute;
+    left: calc(50.0% + -90px - 56px);
+    top: 24px;
+    width: 113px;
+    height: 42px;
+}
+@media (min-width: 568px) {
+    .SetSecretPhraseScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -210px - 56px);
+        top: 24px;
+        width: 113px;
+        height: 42px;
+    }
+}
+@media (min-width: 768px) {
+    .SetSecretPhraseScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -310px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+@media (min-width: 1024px) {
+    .SetSecretPhraseScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -368px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+
+/* This component has a fixed-size layout */
+.SecretPhrase {
+    min-height: 484px;
+    width: 100%; /* This component was designed using a width of 357px */
+    height: 100%;
+}
+.SecretPhrase > .background > .containerMinHeight {
+    min-height: 484px;
+}
+
+
+.SecretPhrase > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.SecretPhrase > .layoutFlow > .elText > * {
+    width: 100%;
+}
+
+
+
+.SecretPhrase > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.SecretPhrase > .layoutFlow > .elText2 > * {
+    width: 100%;
+}
+
+
+.SecretPhrase .elComp {
+    overflow: hidden;
+}
+
+.SecretPhrase .elComp.hasNestedComps > div {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.SecretPhrase > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.SecretPhrase > .layoutFlow > .elComp > * {
+    width: 100%;
+}
+
+
+.SecretPhrase .elButton button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.SecretPhrase .elButton button:focus {
+    box-shadow: 0 0 5px rgba(189, 233, 238, 0.5000);
+    outline: none;
+}
+
+
+
+.SecretPhrase > .layoutFlow > .elButton {
+    /*line-height: 40px;*/
+    position: relative;
+    margin-top: 26px;
+    width: 126px;
+    margin-left: 0px;
+}
+.SecretPhrase > .layoutFlow > .elButton > * {
+    width: 126px;
+    height: 40px;
+}
+
+
+.SecretPhrase .elButton2 button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.SecretPhrase .elButton2 button:focus {
+    box-shadow: 0 0 5px rgba(0, 149, 214, 0.5000);
+    outline: none;
+}
+
+
+
+.SecretPhrase > .layoutFlow > .elButton2 {
+    line-height: 40px;
+    position: relative;
+    margin-top: -40px;
+    width: 126px;
+    margin-left: 148px;
+}
+.SecretPhrase > .layoutFlow > .elButton2 > * {
+    width: 126px;
+    height: 40px;
+}
+
+
+/* This component has a fixed-size layout */
+.SecretPhraseLock {
+    min-height: 122px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 320px */
+    height: 100%;
+}
+.SecretPhraseLock > .background > .containerMinHeight {
+    min-height: 122px;
+}
+
+
+.SecretPhraseLock > .foreground > .elText2 {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 22px;
+    width: 100.0%;
+    height: 79px;
+}
+
+
+.SecretPhraseLock > .foreground > .elCard {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+}
+
+
+.SecretPhraseLock > .foreground > .elText {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 68px;
+    width: 100.0%;
+    height: 20px;
+}
+
+
+.SecretPhraseLock > .foreground > .elLock {
+    position: absolute;
+    left: calc(50.0% + 0px - 23px);
+    top: 20px;
+    width: 46px;
+    height: 29px;
+}
+
+/* This component has a fixed-size layout */
+.SecretPhraseTips {
+    min-height: 399px;
+    width: 100%; /* This component was designed using a width of 240px */
+    height: 100%;
+}
+.SecretPhraseTips > .background > .containerMinHeight {
+    min-height: 399px;
+}
+
+
+.SecretPhraseTips > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 0px;
+    width: calc(100.0% - 20px);
+}
+.SecretPhraseTips > .layoutFlow > .elText > * {
+    width: 100%;
+}
+
+
+
+.SecretPhraseTips > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: 18px;
+    margin-left: 20px;
+    margin-right: 0px;
+    width: calc(100.0% - 20px);
+}
+.SecretPhraseTips > .layoutFlow > .elText2 > * {
+    width: 100%;
+}
+
+
+/* This component has a fixed-size layout */
+.ConfirmPhrase {
+    min-height: 505px;
+    width: 100%; /* This component was designed using a width of 320px */
+    height: 100%;
+}
+.ConfirmPhrase > .background > .containerMinHeight {
+    min-height: 505px;
+}
+
+
+.ConfirmPhrase > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.ConfirmPhrase > .layoutFlow > .elText > * {
+    width: 100%;
+}
+
+
+
+.ConfirmPhrase > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: 18px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.ConfirmPhrase > .layoutFlow > .elText2 > * {
+    width: 100%;
+}
+
+
+
+.ConfirmPhrase > .layoutFlow > .elText3 {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100.0% - 20px);
+    height: 50px;
+}
+.ConfirmPhrase > .layoutFlow > .elText3 > * {
+    width: 100%;
+}
+
+
+.ConfirmPhrase .elList:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ConfirmPhrase .elList .gridItem {
+    float: left;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .ConfirmPhrase .elList .gridItem {
+        width: calc(100% / 4 - 20.0px*(3/4));
+        overflow: hidden;
+    }
+
+    .ConfirmPhrase .elList .cols4_0 {
+        margin-right: 20.0px;
+        margin-bottom: 20.0px;
+        clear: left;
+    }
+    .ConfirmPhrase .elList .cols4_1 {
+        margin-right: 20.0px;
+        margin-bottom: 20.0px;
+    }
+    .ConfirmPhrase .elList .cols4_2 {
+        margin-right: 20.0px;
+        margin-bottom: 20.0px;
+    }
+    .ConfirmPhrase .elList .cols4_3 {
+        margin-bottom: 20.0px;
+    }
+    .ConfirmPhrase .elList .cols4_3:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .ConfirmPhrase .elList .gridItem {
+        width: calc(100% / 3 - 20.0px*(2/3));
+        overflow: hidden;
+    }
+
+    .ConfirmPhrase .elList .cols3_0 {
+        margin-right: 20.0px;
+        margin-bottom: 20.0px;
+        clear: left;
+    }
+    .ConfirmPhrase .elList .cols3_1 {
+        margin-right: 20.0px;
+        margin-bottom: 20.0px;
+    }
+    .ConfirmPhrase .elList .cols3_2 {
+        margin-bottom: 20.0px;
+    }
+    .ConfirmPhrase .elList .cols4_3:after { }
+    .ConfirmPhrase .elList .cols3_2:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .ConfirmPhrase .elList .gridItem {
+        width: calc(100% / 3 - 20.1px*(2/3));
+        overflow: hidden;
+    }
+
+    .ConfirmPhrase .elList .cols3_0 { margin-right: 0; margin-bottom: 0; }
+    .ConfirmPhrase .elList .cols3_1 { margin-right: 0; margin-bottom: 0; }
+    .ConfirmPhrase .elList .cols3_2 { margin-right: 0; margin-bottom: 0; }
+    .ConfirmPhrase .elList .cols3_0 {
+        margin-right: 20.1px;
+        margin-bottom: 20.1px;
+        clear: left;
+    }
+    .ConfirmPhrase .elList .cols3_1 {
+        margin-right: 20.1px;
+        margin-bottom: 20.1px;
+    }
+    .ConfirmPhrase .elList .cols3_2 {
+        margin-bottom: 20.1px;
+    }
+    .ConfirmPhrase .elList .cols4_3:after { }
+    .ConfirmPhrase .elList .cols3_2:after { }
+    .ConfirmPhrase .elList .cols3_2:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+@media (max-width: 567px) {
+    .ConfirmPhrase .elList .gridItem {
+        width: calc(100% / 3 - 20.1px*(2/3));
+        overflow: hidden;
+    }
+
+    .ConfirmPhrase .elList .cols3_0 { margin-right: 0; margin-bottom: 0; }
+    .ConfirmPhrase .elList .cols3_1 { margin-right: 0; margin-bottom: 0; }
+    .ConfirmPhrase .elList .cols3_2 { margin-right: 0; margin-bottom: 0; }
+    .ConfirmPhrase .elList .cols3_0 { margin-right: 0; margin-bottom: 0; }
+    .ConfirmPhrase .elList .cols3_1 { margin-right: 0; margin-bottom: 0; }
+    .ConfirmPhrase .elList .cols3_2 { margin-right: 0; margin-bottom: 0; }
+    .ConfirmPhrase .elList .cols3_0 {
+        margin-right: 20.1px;
+        margin-bottom: 20.1px;
+        clear: left;
+    }
+    .ConfirmPhrase .elList .cols3_1 {
+        margin-right: 20.1px;
+        margin-bottom: 20.1px;
+    }
+    .ConfirmPhrase .elList .cols3_2 {
+        margin-bottom: 20.1px;
+    }
+    .ConfirmPhrase .elList .cols4_3:after { }
+    .ConfirmPhrase .elList .cols3_2:after { }
+    .ConfirmPhrase .elList .cols3_2:after { }
+    .ConfirmPhrase .elList .cols3_2:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+
+
+.ConfirmPhrase > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100.0% - 20px);
+}
+.ConfirmPhrase > .layoutFlow > .elList > * {
+    width: 100%;
+}
+
+
+.ConfirmPhrase .elButton button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.ConfirmPhrase .elButton button:focus {
+    box-shadow: 0 0 5px rgba(0, 149, 214, 0.5000);
+    outline: none;
+}
+
+
+
+.ConfirmPhrase > .layoutFlow > .elButton {
+    line-height: 40px;
+    position: relative;
+    margin-top: 20px;
+    width: 126px;
+    margin-left: 0px;
+}
+.ConfirmPhrase > .layoutFlow > .elButton > * {
+    width: 126px;
+    height: 40px;
+}
+
+
+.ConfirmSecretPhraseScreen .elConfirmPhrase {
+    overflow: hidden;
+}
+
+.ConfirmSecretPhraseScreen .elConfirmPhrase.hasNestedComps > div {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(100.0% - 10px);
+}
+.ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase > * {
+    width: 100%;
+}
+
+.ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase > .background > .containerMinHeight {
+    min-height: 505px;
+}
+
+@media (min-width: 568px) {
+    .ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase {
+        position: relative;
+        margin-top: 98px;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: calc(100.0% - 10px);
+    }
+    .ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase > * {
+        width: 100%;
+    }
+
+    .ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase > .background > .containerMinHeight {
+        min-height: 505px;
+    }
+
+}
+@media (min-width: 768px) {
+    .ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase {
+        position: relative;
+        margin-top: 133px;
+        margin-left: 50px;
+        margin-right: 50px;
+        width: calc(100.0% - 100px);
+    }
+    .ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase > * {
+        width: 100%;
+    }
+
+    .ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase > .background > .containerMinHeight {
+        min-height: 505px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase {
+        position: relative;
+        margin-top: 133px;
+        margin-left: calc(50.0% - 300px);
+        margin-right: calc(50.0% - 30px);
+        width: 600px;
+    }
+    .ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase > * {
+        width: 100%;
+    }
+
+    .ConfirmSecretPhraseScreen > .layoutFlow > .elConfirmPhrase > .background > .containerMinHeight {
+        min-height: 505px;
+    }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.ConfirmSecretPhraseScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+    position: absolute;
+    left: calc(50.0% + -90px - 56px);
+    top: 24px;
+    width: 113px;
+    height: 42px;
+}
+@media (min-width: 568px) {
+    .ConfirmSecretPhraseScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -210px - 56px);
+        top: 24px;
+        width: 113px;
+        height: 42px;
+    }
+}
+@media (min-width: 768px) {
+    .ConfirmSecretPhraseScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -310px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+@media (min-width: 1024px) {
+    .ConfirmSecretPhraseScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -368px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+
+/* This component has a fixed-size layout */
+.PhraseButton {
+    min-height: 41px;
+    width: 100%; /* This component was designed using a width of 96px */
+    height: 100%;
+}
+.PhraseButton > .background > .containerMinHeight {
+    min-height: 41px;
+}
+
+.PhraseButton .elButton button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.PhraseButton .elButton button:focus {
+    box-shadow: 0 0 5px rgba(189, 233, 238, 0.5000);
+    outline: none;
+}
+
+
+
+.PhraseButton > .layoutFlow > .elButton {
+    line-height: 40px;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.PhraseButton > .layoutFlow > .elButton > * {
+    width: 100%;
+    height: 40px;
+}
+
+/* This component has a fixed-size layout */
+.AgreementForm {
+    min-height: 502px;
+    width: 100%; /* This component was designed using a width of 600px */
+    height: 100%;
+}
+.AgreementForm > .background > .containerMinHeight {
+    min-height: 502px;
+}
+
+
+.AgreementForm > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.AgreementForm > .layoutFlow > .elText > * {
+    width: 100%;
+}
+
+
+
+.AgreementForm > .layoutFlow > .elWebcontent {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.AgreementForm > .layoutFlow > .elWebcontent > * {
+    width: 100%;
+}
+
+
+.AgreementForm .elButton button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.AgreementForm .elButton button:focus {
+    box-shadow: 0 0 5px rgba(254, 252, 255, 0.5000);
+    outline: none;
+}
+
+
+
+.AgreementForm > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 10px;
+    width: 144px;
+    margin-left: 0px;
+}
+.AgreementForm > .layoutFlow > .elButton > * {
+    width: 144px;
+    height: 35px;
+}
+
+
+.AgreementForm .elButton2 button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.AgreementForm .elButton2 button:focus {
+    box-shadow: 0 0 5px rgba(0, 149, 214, 0.5000);
+    outline: none;
+}
+
+
+
+.AgreementForm > .layoutFlow > .elButton2 {
+    line-height: 35px;
+    position: relative;
+    margin-top: -35px;
+    width: 144px;
+}
+.AgreementForm > .layoutFlow > .elButton2 > * {
+    width: 144px;
+    height: 35px;
+}
+
+/* This component has a fixed-size layout */
+.AgreementForm {
+    min-height: 766px;
+    width: 100%; /* This component was designed using a width of 600px */
+    height: 100%;
+}
+.AgreementForm > .background > .containerMinHeight {
+    min-height: 766px;
+}
+
+
+.AgreementForm > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.AgreementForm > .layoutFlow > .elText > * {
+    width: 100%;
+}
+
+.AgreementForm > .layoutFlow > .elEmbed {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+    height: 80vh;
+    overflow: auto;
+}
+
+@media (min-width: 768px) {
+    .AgreementForm > .layoutFlow > .elEmbed {
+        position: relative;
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: calc(100.0% - 0px);
+        height: 70vh;
+        overflow: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .AgreementForm > .layoutFlow > .elEmbed {
+        position: relative;
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: calc(100.0% - 0px);
+        height: 70vh;
+        overflow: auto;
+    }
+}
+
+.AgreementForm > .layoutFlow > .elEmbed > * {
+    width: 100%;
+}
+
+
+.AgreementForm .elButton button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.AgreementForm .elButton button:focus {
+    box-shadow: 0 0 5px rgba(254, 252, 255, 0.5000);
+    outline: none;
+}
+
+
+
+.AgreementForm > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 10px;
+    width: 144px;
+    margin-left: 0px;
+}
+.AgreementForm > .layoutFlow > .elButton > * {
+    width: 144px;
+    height: 35px;
+}
+
+
+.AgreementForm .elButton2 button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.AgreementForm .elButton2 button:focus {
+    box-shadow: 0 0 5px rgba(0, 149, 214, 0.5000);
+    outline: none;
+}
+
+
+
+.AgreementForm > .layoutFlow > .elButton2 {
+    line-height: 35px;
+    position: relative;
+    margin-top: -35px;
+    width: 144px;
+    margin-left: 160px;
+}
+.AgreementForm > .layoutFlow > .elButton2 > * {
+    width: 144px;
+    height: 35px;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.AgreementScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .AgreementScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .AgreementScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .AgreementScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+
+.AgreementScreen .elAgreementForm {
+    overflow: hidden;
+}
+
+.AgreementScreen .elAgreementForm.hasNestedComps > div {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.AgreementScreen > .layoutFlow > .elAgreementForm {
+    position: relative;
+    margin-top: 92px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100.0% - 20px);
+}
+.AgreementScreen > .layoutFlow > .elAgreementForm > * {
+    width: 100%;
+}
+
+.AgreementScreen > .layoutFlow > .elAgreementForm > .background > .containerMinHeight {
+    min-height: 498px;
+}
+
+@media (min-width: 568px) {
+    .AgreementScreen > .layoutFlow > .elAgreementForm {
+        position: relative;
+        margin-top: 133px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(100.0% - 20px);
+    }
+    .AgreementScreen > .layoutFlow > .elAgreementForm > * {
+        width: 100%;
+    }
+
+    .AgreementScreen > .layoutFlow > .elAgreementForm > .background > .containerMinHeight {
+        min-height: 498px;
+    }
+
+}
+@media (min-width: 768px) {
+    .AgreementScreen > .layoutFlow > .elAgreementForm {
+        position: relative;
+        margin-top: 133px;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: calc(100.0% - 40%);
+    }
+    .AgreementScreen > .layoutFlow > .elAgreementForm > * {
+        width: 100%;
+    }
+
+    .AgreementScreen > .layoutFlow > .elAgreementForm > .background > .containerMinHeight {
+        min-height: 498px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .AgreementScreen > .layoutFlow > .elAgreementForm {
+        position: relative;
+        margin-top: 133px;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: calc(100.0% - 40%);
+    }
+    .AgreementScreen > .layoutFlow > .elAgreementForm > * {
+        width: 100%;
+    }
+
+    .AgreementScreen > .layoutFlow > .elAgreementForm > .background > .containerMinHeight {
+        min-height: 498px;
+    }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.AgreementScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+    position: absolute;
+    left: calc(50.0% + -90px - 56px);
+    top: 24px;
+    width: 113px;
+    height: 42px;
+}
+@media (min-width: 568px) {
+    .AgreementScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -210px - 56px);
+        top: 24px;
+        width: 113px;
+        height: 42px;
+    }
+}
+@media (min-width: 768px) {
+    .AgreementScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -310px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+@media (min-width: 1024px) {
+    .AgreementScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -368px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+
+/* This component has a fixed-size layout */
+.CongratForm {
+    min-height: 380px;
+    width: 100%; /* This component was designed using a width of 600px */
+    height: 100%;
+}
+.CongratForm > .background > .containerMinHeight {
+    min-height: 380px;
+}
+
+
+.CongratForm > .layoutFlow > .elCongrat {
+    position: relative;
+    margin-top: 0px;
+    width: 50px;
+    margin-left: 0px;
+}
+.CongratForm > .layoutFlow > .elCongrat > * {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.CongratForm > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.CongratForm > .layoutFlow > .elText > * {
+    width: 100%;
+}
+
+
+
+.CongratForm > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.CongratForm > .layoutFlow > .elText2 > * {
+    width: 100%;
+}
+
+
+
+.CongratForm > .layoutFlow > .elText3 {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.CongratForm > .layoutFlow > .elText3 > * {
+    width: 100%;
+}
+
+
+
+.CongratForm > .layoutFlow > .elText4 {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.CongratForm > .layoutFlow > .elText4 > * {
+    width: 100%;
+}
+
+
+.CongratForm .elButton button {
+    cursor: pointer;
+    border: 0.0px solid transparent;
+    border-radius: 3.4px;
+}
+
+.CongratForm .elButton button:focus {
+    box-shadow: 0 0 5px rgba(0, 149, 214, 0.5000);
+    outline: none;
+}
+
+
+
+.CongratForm > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 24px;
+    width: 144px;
+    margin-left: 0px;
+}
+.CongratForm > .layoutFlow > .elButton > * {
+    width: 144px;
+    height: 35px;
+}
+
+
+
+.CongratForm > .foreground > .elGraphic {
+    position: absolute;
+    left: 298px;
+    top: 252px;
+    width: 3px;
+    height: 4px;
+}
+
+
+.CongratForm > .foreground > .elGraphic2 {
+    position: absolute;
+    left: 298px;
+    top: 252px;
+    width: 3px;
+    height: 4px;
+}
+
+
+.CongratForm > .foreground > .elGraphic3 {
+    position: absolute;
+    left: 298px;
+    top: 252px;
+    width: 3px;
+    height: 4px;
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.CongratulationScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .CongratulationScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .CongratulationScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .CongratulationScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+
+.CongratulationScreen .elCongratForm {
+    overflow: hidden;
+}
+
+.CongratulationScreen .elCongratForm.hasNestedComps > div {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.CongratulationScreen > .layoutFlow > .elCongratForm {
+    position: relative;
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100.0% - 20px);
+}
+.CongratulationScreen > .layoutFlow > .elCongratForm > * {
+    width: 100%;
+}
+
+.CongratulationScreen > .layoutFlow > .elCongratForm > .background > .containerMinHeight {
+    min-height: 380px;
+}
+
+@media (min-width: 568px) {
+    .CongratulationScreen > .layoutFlow > .elCongratForm {
+        position: relative;
+        margin-top: 80px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(100.0% - 20px);
+    }
+    .CongratulationScreen > .layoutFlow > .elCongratForm > * {
+        width: 100%;
+    }
+
+    .CongratulationScreen > .layoutFlow > .elCongratForm > .background > .containerMinHeight {
+        min-height: 380px;
+    }
+
+}
+@media (min-width: 768px) {
+    .CongratulationScreen > .layoutFlow > .elCongratForm {
+        position: relative;
+        margin-top: 83px;
+        margin-left: 30%;
+        margin-right: 30%;
+        width: calc(100.0% - 60%);
+    }
+    .CongratulationScreen > .layoutFlow > .elCongratForm > * {
+        width: 100%;
+    }
+
+    .CongratulationScreen > .layoutFlow > .elCongratForm > .background > .containerMinHeight {
+        min-height: 380px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .CongratulationScreen > .layoutFlow > .elCongratForm {
+        position: relative;
+        margin-top: 83px;
+        margin-left: 30%;
+        margin-right: 30%;
+        width: calc(100.0% - 60%);
+    }
+    .CongratulationScreen > .layoutFlow > .elCongratForm > * {
+        width: 100%;
+    }
+
+    .CongratulationScreen > .layoutFlow > .elCongratForm > .background > .containerMinHeight {
+        min-height: 380px;
+    }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.CongratulationScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+    position: absolute;
+    left: calc(50.0% + -90px - 56px);
+    top: 24px;
+    width: 113px;
+    height: 42px;
+}
+@media (min-width: 568px) {
+    .CongratulationScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -210px - 56px);
+        top: 24px;
+        width: 113px;
+        height: 42px;
+    }
+}
+@media (min-width: 768px) {
+    .CongratulationScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -310px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+@media (min-width: 1024px) {
+    .CongratulationScreen > .screenFgContainer > .foreground > .elCypher_logo_w_text {
+        left: calc(50.0% + -368px - 56px);
+        top: 24px;
+        width: 112px;
+        height: 42px;
+    }
+}
+
+
+/* This component has a fixed-size layout */
+.HeaderBar {
+    min-height: 56px;
+    width: 100%; /* This component was designed using a width of 458px */
+    /*height: 100%;*/
+}
+.HeaderBar > .background > .containerMinHeight {
+    min-height: 56px;
+}
+
+
+.HeaderBar > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 16px;
+    width: 160px;
+    margin-left: calc(50.0% - 80px);
+}
+.HeaderBar > .layoutFlow > .elText > * {
+    width: 160px;
+}
+
+
+
+.HeaderBar > .foreground > .elRectangle1 {
+    position: absolute;
+    right: 14px;
+    /*top: 11px;*/
+    width: 56px;
+    height: 56px;
+}
+
+
+.HeaderBar > .foreground > .elRectangle {
+    position: absolute;
+    left: 14px;
+    top: 11px;
+    width: 33px;
+    height: 33px;
+}
+
+
+/* Narrowest size for this element's responsive layout */
+.LoginAccountScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .LoginAccountScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .LoginAccountScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .LoginAccountScreen > .background > .elBackground {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100.0%;
+        height: 100%;
+    }
+}
+
+.LoginAccountScreen .elHeaderBar {
+    overflow: hidden;
+}
+
+.LoginAccountScreen .elHeaderBar.hasNestedComps > div {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.LoginAccountScreen > .layoutFlow > .elHeaderBar {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+}
+.LoginAccountScreen > .layoutFlow > .elHeaderBar > * {
+    width: 100%;
+}
+
+.LoginAccountScreen > .layoutFlow > .elHeaderBar > .background > .containerMinHeight {
+    min-height: 56px;
+}
+
+@media (min-width: 568px) {
+    .LoginAccountScreen > .layoutFlow > .elHeaderBar {
+        position: relative;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: calc(100.0% - 0px);
+    }
+    .LoginAccountScreen > .layoutFlow > .elHeaderBar > * {
+        width: 100%;
+    }
+
+    .LoginAccountScreen > .layoutFlow > .elHeaderBar > .background > .containerMinHeight {
+        min-height: 56px;
+    }
+
+}
+@media (min-width: 768px) {
+    .LoginAccountScreen > .layoutFlow > .elHeaderBar {
+        position: relative;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: calc(100.0% - 0px);
+    }
+    .LoginAccountScreen > .layoutFlow > .elHeaderBar > * {
+        width: 100%;
+    }
+
+    .LoginAccountScreen > .layoutFlow > .elHeaderBar > .background > .containerMinHeight {
+        min-height: 56px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .LoginAccountScreen > .layoutFlow > .elHeaderBar {
+        position: relative;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: calc(100.0% - 0px);
+    }
+    .LoginAccountScreen > .layoutFlow > .elHeaderBar > * {
+        width: 100%;
+    }
+
+    .LoginAccountScreen > .layoutFlow > .elHeaderBar > .background > .containerMinHeight {
+        min-height: 56px;
+    }
+
+}
+
+.LoginAccountScreen .elLogin {
+    overflow: hidden;
+}
+
+.LoginAccountScreen .elLogin.hasNestedComps > div {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+.LoginAccountScreen > .layoutFlow > .elLogin {
+    position: relative;
+    margin-top: 40px;
+    width: 322px;
+    margin-left: calc(50.0% - 161px);
+}
+.LoginAccountScreen > .layoutFlow > .elLogin > * {
+    width: 322px;
+}
+
+.LoginAccountScreen > .layoutFlow > .elLogin > .background > .containerMinHeight {
+    min-height: 550px;
+}
+
+@media (min-width: 568px) {
+    .LoginAccountScreen > .layoutFlow > .elLogin {
+        position: relative;
+        margin-top: 30px;
+        width: 322px;
+        margin-left: calc(50.0% - 161px);
+    }
+    .LoginAccountScreen > .layoutFlow > .elLogin > * {
+        width: 322px;
+    }
+
+    .LoginAccountScreen > .layoutFlow > .elLogin > .background > .containerMinHeight {
+        min-height: 550px;
+    }
+
+}
+@media (min-width: 768px) {
+    .LoginAccountScreen > .layoutFlow > .elLogin {
+        position: relative;
+        margin-top: 40px;
+        width: 320px;
+        margin-left: calc(50.0% - 160px);
+    }
+    .LoginAccountScreen > .layoutFlow > .elLogin > * {
+        width: 320px;
+    }
+
+    .LoginAccountScreen > .layoutFlow > .elLogin > .background > .containerMinHeight {
+        min-height: 550px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .LoginAccountScreen > .layoutFlow > .elLogin {
+        position: relative;
+        margin-top: 40px;
+        width: 320px;
+        margin-left: calc(50.0% - 160px);
+    }
+    .LoginAccountScreen > .layoutFlow > .elLogin > * {
+        width: 320px;
+    }
+
+    .LoginAccountScreen > .layoutFlow > .elLogin > .background > .containerMinHeight {
+        min-height: 550px;
+    }
+
+}
+
+/* This component has a fixed-size layout */
+.MyCypher {
+    /* min-height: 300px; */
+    min-height: 200px;
+    min-width: 331px;
+    /* This component has a fixed size */
+}
+.MyCypher > .background > .containerMinHeight {
+    min-height: 250px;
+}
+
+
+.MyCypher > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 15px;
+    width: 129px;
+    margin-left: 21px;
+}
+.MyCypher > .layoutFlow > .elText > * {
+    width: 129px;
+}
+
+
+.MyCypher .elList li {
+    margin-bottom: 5px;
+}
+
+
+
+.MyCypher > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 3px;
+    /* width: 289px;
+    margin-left: 21px;
+    margin-right: 21px; */
+}
+/* .MyCypher > .layoutFlow > .elList > * {
+    width: 289px;
+} */
+
+
+.MyCypher .elList2 li {
+    margin-bottom: 5px;
+}
+
+.MyCypher > .layoutFlow > .elList2 {
+    position: relative;
+    margin-top: 8px;
+    /* width: 289px;
+    margin-left: 21px;
+    margin-right: 21px; */
+}
+/* .MyCypher > .layoutFlow > .elList2 > * {
+    width: 289px;
+} */
+
+
+
+.MyCypher > .foreground > .elVector {
+    position: absolute;
+    top: 4px;
+    left: 125px;
+    width: 50px;
+    height: 50px;
+}
+
+/* This component has a fixed-size layout */
+.AcctListItem {
+    min-height: 24px;
+    width: 100%; /* This component was designed using a width of 250px */
+    height: 100%;
+}
+.AcctListItem > .background > .containerMinHeight {
+    min-height: 24px;
+}
+
+
+.AcctListItem > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 4px;
+    margin-left: 62px;
+    margin-right: 0px;
+    width: calc(100.0% - 62px);
+}
+.AcctListItem > .layoutFlow > .elText > * {
+    width: 100%;
+}
+
+
+
+.AcctListItem > .foreground > .elVector {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 18px;
+    height: 14px;
+}
+
+
+.AcctListItem > .foreground > .elRectangle {
+    position: absolute;
+    left: 28px;
+    top: 0px;
+    width: 24px;
+    height: 24px;
+}
+
+/* This component has a fixed-size layout */
+.MenuItem {
+    min-height: 24px;
+    width: 100%; /* This component was designed using a width of 250px */
+    height: 100%;
+}
+
+.MenuItem > .background > .containerMinHeight {
+    min-height: 24px;
+}
+
+
+.MenuItem > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 3px;
+    width: 236px;
+    margin-left: 40px;
+}
+.MenuItem > .layoutFlow > .elText > * {
+    width: 236px;
+}
+
+
+
+.MenuItem > .foreground > .elVector {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 17px;
+    height: 14px;
+}
+
+.beta-app_label {
+    font-size: .8rem;
+    position: relative;
+    top: 0;
+    border-radius: 10px;
+    padding: 0 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.beta-app_label:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.MuiPaper-root.MuiAlert-root.marquee-alert .MuiAlert-icon {
+    padding: 0;
+}
+.MuiPaper-root.MuiAlert-root.marquee-alert .MuiAlert-message {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}

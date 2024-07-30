@@ -1,0 +1,20 @@
+export const supportedBlockchains = [
+  'Bitcoin',
+  'Ethereum',
+  'BinanceSmartChain',
+  'Tron',
+  'BitcoinTestnet',
+  'EthereumRopsten',
+  'EthereumGoerli',
+  'TronShasta',
+  'Litecoin',
+  'Dogecoin',
+  'BitcoinCash',
+  'BitcoinSV',
+  'Solana',
+  'SolanaTestnet',
+  'Polygon',
+  'Avalanche',
+  'ArbitrumOne',
+  'Optimism'
+];

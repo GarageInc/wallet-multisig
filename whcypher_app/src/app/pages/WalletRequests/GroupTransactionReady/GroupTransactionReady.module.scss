@@ -1,0 +1,59 @@
+.container {
+  padding: 0 20px;
+  text-align: center;
+
+  .inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .statusIcon {
+    font-size: 150px;
+    color: #2F41E8;
+    text-align: center;
+    width: 50%;
+    margin: 21px auto;
+  }
+
+  .iconButton {
+    padding: 5px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+      border-radius: 50%;
+    }
+
+    .icon {
+      font-size: 16px;
+      color: #868686;
+    }
+  }
+
+  .text {
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .actionText {
+    font-weight: 300;
+    font-size: 18px;
+    color: #252525;
+  }
+
+  .bntIcon {
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .cta {
+    margin-top: 19px;
+    color: #fff;
+  }
+}

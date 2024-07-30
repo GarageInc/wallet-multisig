@@ -1,0 +1,107 @@
+/* This component has a fixed-size layout */
+.appUnlock {
+  width: 100%;
+  height: 100%;
+
+  .layoutFlow {
+    .elRectangleWrapper {
+      position: relative;
+      margin-top: 0px;
+      width: 236px;
+      margin-left: calc(50% - 118px);
+
+      .elRectangle {
+        background-image: url(../../static/image/Login_elRectangle_418846.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+      }
+    }
+    .elText2Wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 307px;
+      margin: 100px auto 0;
+
+      .elText2 {
+        font-size: 30px;
+        line-height: 21px;
+        color: #2F41E8;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 32px;
+      }
+    }
+
+    .elFieldWrapper {
+      margin: 53px 16px 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      .elField {
+        letter-spacing: 5px;
+      }
+
+      .elText3 {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+    }
+
+    .elButtonWrapper {
+      line-height: 35px;
+      position: relative;
+      margin: 17px 16px 0px;
+
+      .elButton {
+        display: block;
+        color: white;
+        text-align: center;
+        background-color: #2F41E8;
+
+        button {
+          cursor: pointer;
+          border: 0px solid transparent;
+          border-radius: 3.4px;
+          &:focus {
+            box-shadow: 0 0 5px rgba(0, 149, 214, 0.5);
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .elText4 {
+      position: relative;
+      margin-top: 25px;
+      margin-left: 10%;
+      margin-right: calc(10% + 0px);
+      width: calc(80% - 0px);
+    }
+
+    .elText5 {
+      position: relative;
+      margin-top: 0px;
+      margin-left: 10%;
+      margin-right: calc(10% + 0px);
+      width: calc(80% - 0px);
+    }
+  }
+}
+
+.forgotPassword {
+  color: #2F41E8;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 13px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

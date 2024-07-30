@@ -1,0 +1,70 @@
+.dataWrapper {
+  // border-top: 1px solid #bfbfbf;
+  // border-bottom: 1px solid #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 15px 10px;
+  background-color: #F4F7FF;
+  border-radius: 5px;
+  margin-bottom: 15px;
+
+  .inlineData {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .fieldText {
+    font-weight: 300;
+    font-size: 16px;
+  }
+  
+  .fieldValue {
+    font-weight: 500;
+  }
+}
+
+.packageDescriptionWrapper {
+  text-align: left;
+
+  .packageDescriptionTitle {
+    font-weight: 500;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  ul li::before {
+      content: "\1F5F8";
+      position: absolute;
+      left: 0;
+      top: -5px;
+      color: #2F41E8;
+      font-size: 20px;
+  }
+}
+
+.pendingPaymentsWrapper {
+  padding: 0;
+
+  li {
+    list-style-position: inside;
+    list-style-type: disc;
+  }
+}

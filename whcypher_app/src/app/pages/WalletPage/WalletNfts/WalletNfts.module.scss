@@ -1,0 +1,106 @@
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+}
+
+.loadingWrapper {
+  height: 200px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.tokenWrapper {
+  margin-top: 20px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.tokenHeaderWrapper {
+  background: #eaecf7;
+  border-radius: 6px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.tokenNameWrapper {
+  text-align: left;
+
+  .tokenName {
+    font-size: 14px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .tokenID {
+    font-size: 12px;
+    color: grey;
+  }
+}
+
+.metaDataWrapper {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+
+  .missingMetaData {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+
+  .metaData {
+    text-align: justify;
+
+    img {
+      width: 100%;
+      max-height: 300px;
+      padding: 20px;
+      padding-bottom: 0;
+    }
+  
+    .description {
+      font-size: 14px;
+      padding: 0 25px 10px 25px;
+    }
+  }
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageNotAvailableWrapper {
+
+}
+
+.imageLoadingWrapper {
+  width: 100%;
+  padding-bottom: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+
+  .loadingWrapper {
+    position: absolute;
+    top: 10px;
+  }
+}

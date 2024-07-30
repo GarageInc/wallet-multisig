@@ -1,0 +1,61 @@
+.bodyText {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.textTips {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bulletPoints {
+  text-align: left;
+}
+
+.smallListItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 9px;
+  font-size: 13px;
+
+  svg {
+    flex-shrink: 0;
+    color: #2F41E8;
+    margin-right: 8px;
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 9px;
+
+  svg {
+    flex-shrink: 0;
+    color: #2F41E8;
+    margin-right: 8px;
+  }
+}
+
+.checkmark {
+  font-size: 20px;
+}
+
+.itemText {
+  font-size: 16px;
+  display: inline-block;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.buttonWrapper {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 14px;
+  margin-right: 14px;
+}

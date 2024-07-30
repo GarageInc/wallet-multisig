@@ -1,0 +1,140 @@
+# when we will need more security
+# https://stackoverflow.com/questions/21870083/specify-sudo-password-for-ansible#answer-33191109
+
+
+# Bitcoin libs also needs libssl1.0.0
+# https://packages.debian.org/search?suite=jessie&arch=any&mode=exactfilename&searchon=contents&keywords=libssl.so.1.0.0
+# add "deb http://security.debian.org/debian-security jessie/updates main" to /etc/apt/sources.list
+# add pubkey sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9D6D8F6BC857C906
+# and install sudo apt install libssl1.0.0
+
+---
+- hosts: cosigner_prod_api
+  gather_facts: false
+  vars:
+    ansible_ssh_user: root
+    create_user: "{{ ansible_deploy_user }}"
+    create_group: users
+    user_password: "{{ ansible_become_password }}"
+    copy_local_key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa_xtoken.pub') }}"
+    sys_packages: [ 'curl', 'vim', 'git', 'ufw', 'htop', 'ntp', 'sysstat', 'gpg', 'gpg-agent', 'acl' ]
+
+  tasks:
+    - name: Make sure we have a 'deploy' group
+      group:
+        name: deploy
+        state: present
+
+    - name: Create a new regular user with sudo privileges
+      user:
+        name: "{{ create_user }}"
+        password: "{{ user_password | password_hash('sha512') }}"
+        groups: sudo
+        append: yes
+        state: present
+        createhome: yes
+        shell: /bin/bash
+
+    - name: Set authorized key for remote user
+      authorized_key:
+        user: "{{ create_user }}"
+        state: present
+        key: "{{ copy_local_key }}"
+
+    - name: Change ansible folder ownership
+      file:
+        path: "/home/{{ create_user }}/.ansible/"
+        owner: "{{ create_user }}"
+        group: "{{ create_group }}"
+        recurse: yes
+
+    - name: Disable password authentication for root
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        state: present
+        regexp: '^PermitRootLogin'
+        line: 'PermitRootLogin no'
+
+    - name: Disable password login
+      lineinfile:
+        dest: /etc/ssh/sshd_config
+        state: present
+        regexp: '^PasswordAuthentication'
+        line: 'PasswordAuthentication no'
+
+    - name: Restart SSHD service
+      service:
+        name: sshd
+        state: restarted
+
+    - name: Update apt
+      apt: update_cache=yes
+
+    - name: Install required system packages
+      apt:
+        name: "{{ sys_packages }}"
+        state: latest
+
+    - name: Set the timezone to the UTC
+      timezone: "name=UTC"
+
+    - name: Stop NTP service
+      service:
+        name: ntp
+        state: stopped
+
+    - name: Server time
+      command: ntpd -gq
+
+    - name: Start NTP service
+      service:
+        name: ntp
+        state: started
+
+    - name: Set local for server time
+      command: timedatectl set-local-rtc 0
+
+    - name: Sync server time
+      command: hwclock --systohc
+
+    # Ubuntu Firewall
+    - name: UFW - Dissable firewal to avoid acidential lock out
+      ufw:
+        state: disabled
+
+    - name: UFW - Deny all other incoming traffic by default
+      ufw:
+        policy: deny
+        direction: incoming
+
+    - name: UFW - Allow any outgoing traffic by default
+      ufw:
+        policy: allow
+        direction: outgoing
+
+    - name: UFW - Allow SSH connections
+      ufw:
+        rule: allow
+        name: OpenSSH
+
+    - name: UFW - Rate limit ssh login
+      ufw:
+        rule: limit
+        port: ssh
+        proto: tcp
+
+    - name: Allow all access to tcp port 80
+      ufw:
+        rule: allow
+        port: '80'
+        proto: tcp
+
+    - name: Allow all access to tcp port 443
+      ufw:
+        rule: allow
+        port: '443'
+        proto: tcp
+
+    - name: UFW - Enable firewal
+      ufw:
+        state: enabled

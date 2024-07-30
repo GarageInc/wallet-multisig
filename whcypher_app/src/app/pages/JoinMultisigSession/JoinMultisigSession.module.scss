@@ -1,0 +1,59 @@
+.container {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectLabel {
+  text-align: left;
+  color: #000;
+}
+
+.body {
+  color: #000;
+  text-align: left;
+}
+
+.input {
+  color: #000;
+  font-size: 15px;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.advancedSection {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .switchWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .arrow {
+    padding: 0;
+  }
+
+  .inputHint {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .thinLabel {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .link {
+    font-size: 12px;
+    text-decoration: underline;
+  }
+}

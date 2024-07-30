@@ -1,0 +1,56 @@
+.container {
+  .walletsPanel {
+    height: 10%;
+    color: #000;
+    font-size: 20px;
+
+    &:not(:first-child) {
+      padding-top: 30px;
+    }
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .walletsList {
+    text-align: left;
+    color: #000;
+    font-size: 15px;
+  }
+
+  .listTitle {
+    font-weight: bold;
+    padding: 10px;
+    background: #eaecf7;
+    border-radius: 6px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .walletInfo {
+    padding: 5px;
+    padding-left: 20px;
+    color: #000;
+    font-size: 15px;
+  }
+
+  .failedTitle {
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .errorWrapper {
+    color: red; 
+    padding-top: 1px;
+    font-size: 10px;
+  }
+
+  .error {
+    height: 10%;
+    display: flex;
+  }
+}

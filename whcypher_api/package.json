@@ -1,0 +1,35 @@
+{
+  "name": "cosigner-api",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "debug": "babel-node --inspect=localhost:9339 src/index.js",
+    "prod": "NODE_ENV=production pm2 start npm --name cosig-api -- start",
+    "dev": "NODE_ENV=development nodemon --exec npm run debug",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "shipit-cli": "^5.3.0",
+    "shipit-deploy": "^5.3.0",
+    "shipit-shared": "^4.4.2"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "elliptic": "^6.5.4",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "js-sha256": "^0.9.0",
+    "mongoose": "^5.12.9",
+    "morgan": "~1.9.1"
+  }
+}

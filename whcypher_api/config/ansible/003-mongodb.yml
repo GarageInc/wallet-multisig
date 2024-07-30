@@ -1,0 +1,24 @@
+# ansible-galaxy install undergreen.mongodb
+
+---
+
+- name: Install MongoDB
+  hosts: cosigner_prod_api
+  become: true
+  roles:
+    - role: undergreen.mongodb
+      mongodb_storage_dbpath: /var/lib/mongodb
+      mongodb_security_authorization: "enabled"
+      # mongodb_users:
+      #   - {
+      #     name: signer_api_app,
+      #     password: "{{ mongo_user_app_password }}",
+      #     roles: dbOwner,
+      #     database: signer_api_production
+      # }
+      mongodb_user_admin_name: adminUser
+      mongodb_user_admin_password: "{{ mongo_user_admin_password }}"
+      mongodb_root_admin_name: rootUser
+      mongodb_root_admin_password: "{{ mongo_root_admin_password }}"
+      mongodb_root_backup_name: backupUser
+      mongodb_root_backup_password: "{{ mongo_root_backup_password }}"

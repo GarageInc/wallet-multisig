@@ -1,0 +1,18 @@
+.cardContainer {
+  margin: 16px 0;
+  border: 1px solid #D6D9DC;
+  border-radius: 13px;
+
+  .cardTitle {
+    text-align: center;
+    font-weight: 500;
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  .cardSubTitle {
+    text-align: center;
+    font-size: 14px;
+    margin: 20px 0;
+  }
+}

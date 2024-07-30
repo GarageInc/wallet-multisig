@@ -1,0 +1,27 @@
+# Development config
+version: '2'
+
+services:
+  mongo-express:
+    image: mongo-express:latest
+    ports:
+      - "127.0.0.1:8081:8081"
+    networks:
+      frontapp:
+        ipv4_address: 175.234.0.100
+
+  mongo:
+    image: mongo:3.6
+    ports:
+      - "127.0.0.1:27017:27017"
+    networks:
+      frontapp:
+        ipv4_address: 175.234.0.10
+
+networks:
+  frontapp:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 175.234.0.0/16

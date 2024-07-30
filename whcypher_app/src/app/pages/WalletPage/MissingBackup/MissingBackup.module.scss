@@ -1,0 +1,89 @@
+.content {
+
+  .inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.section {
+  color: #000;
+  text-align: left;
+}
+
+.sectionCount {
+  color: #455cc2;
+  font-weight: 700;
+}
+
+.divide {
+  border: 1px solid #e8e8e8;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 28px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+}
+
+.wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.rowCenter {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.walletName {
+  font-size: 14px;
+  color: #000;
+}
+
+.walletAddress {
+  font-size: 12px;
+  color: #000;
+}
+
+.rowInfo {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.infoLabel {
+  font-size: 14px;
+  padding: 15px 0 10px;
+  text-align: left;
+  color: #000;
+}
+
+.infoData {
+  font-size: 14px;
+  padding: 15px 0 10px;
+  margin-left: 10px;
+  color: #000;
+}
+
+.avatarWrapper {
+  position: relative;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.avatarImage {
+  width: 35px;
+  margin-right: 6px;
+}
+
+.avatarLabel {
+  font-size: 14px;
+}

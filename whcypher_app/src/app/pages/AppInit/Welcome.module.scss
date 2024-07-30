@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 50px);
+  padding: 0 20px;
+
+  .button {
+    text-transform: none;
+  }
+
+  .title {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 18px;
+  }
+
+  .subTitle {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 33px;
+  }
+}

@@ -1,0 +1,73 @@
+.container {
+    display: grid;
+    grid-template-rows: 0.9fr;
+    padding: 20px;
+
+
+    .infoWrapper {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        margin-top: -25px;
+        flex-direction: column;
+    }
+
+    .infoTitle {
+        margin-bottom: 5px;
+        font-weight: 600;
+        text-align: start;
+    }
+
+    .infoRow {
+        margin-bottom: 0;
+        text-align: start;
+    }
+
+    .infoVaule {
+        font-weight: 600
+    }
+
+    .advancedArrowWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .pathWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .selectLabel {
+        text-align: left;
+        color: #000;
+    }
+    
+    .thinLabel {
+        font-size: 12px;
+        text-align: left;
+    }
+    
+    .input {
+        color: #000;
+        font-size: 15,
+    }
+    
+    .inline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .link {
+        font-size: 12px;
+        text-decoration: underline;
+    }
+    
+    .arrow {
+        padding: 0;
+    }
+}

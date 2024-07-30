@@ -1,0 +1,42 @@
+{
+  "extends": "@abhijithvijayan/tsconfig",
+  "compilerOptions": {
+    "target": "es2020", // ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'.
+    "module": "esnext", // Module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'.
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "typeRoots": ["./@types", "./node_modules/@types", "./source/types"],
+    "declaration": false,
+    "isolatedModules": true,
+    /* Additional Checks */
+    "useDefineForClassFields": true,
+    "skipLibCheck": true,
+    "noResolve": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "sourceMap": true, // Sentry source code mappings
+    "inlineSources": true,
+    "jsx": "react-jsx",
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["react-spring", "jest", "node"],
+    "baseUrl": "src",
+    "useUnknownInCatchVariables": false,
+    "paths": {
+      "react": ["./node_modules/@types/react"]
+    }
+  },
+  "exclude": ["node_modules", "cypress"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+}

@@ -1,0 +1,57 @@
+.accountName {
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 5px;
+}
+
+.accountPubKeyWrapper {
+  display: flex;
+  align-items: left;
+}
+
+.accountPubKey {
+  color: #000;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.link {
+  color: #276678;
+  font-size: 14px;
+  text-align: left;
+  display: block;
+  padding: 5px 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.accountWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: -0.06em;
+
+  svg {
+    margin-right: 8px;
+  }
+}
